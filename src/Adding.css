@@ -1,0 +1,114 @@
+
+.addform{
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0.25rem ;
+  padding: 0 0.5 0.25;
+  border-bottom: 1px solid #eee;
+  text-align:justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.do{
+  margin-top: 3vh;
+  text-align:justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addfrom label{
+  position: absolute;
+  left: -999999px;
+}
+.addfrom input[type='text']{
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-width: 250px;
+  min-height: 49px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+
+}
+/* button{
+  height: 46px;
+  min-width: 45px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+margin-left:2vw;
+} */
+
+.sla{
+  position: absolute;
+  left: -999999px;
+}
+.sin{
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-width: 250px;
+  min-height: 49px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  outline: none;
+  /* margin-left: 2%; */
+  margin-bottom: 20px;
+}
+.sfo{
+  /* width: 90%; */
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0.25rem ;
+  padding: 0 0.5 0.25;
+  border-bottom: 1px solid #eee;
+  text-align:justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.but{
+  position: relative;
+  border: none;
+}
+.addIcon {
+position: absolute;
+bottom: -17px;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%; /* Circular icon */
+  background-color: black; /* Green initial background */
+  color: white;
+  cursor: pointer;
+  transition: background 0.5s ease, box-shadow 0.4s ease;
+}
+
+.addIcon:hover {
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
