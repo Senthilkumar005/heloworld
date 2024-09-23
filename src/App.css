@@ -31,7 +31,7 @@
   }
 }
 .fulllist{
-font-size: 2em;
+font-size: 1.3em;
 }
 .dot{
   text-align:justify;
@@ -43,7 +43,7 @@ font-size: 2em;
 
 .na{
   width: 55px;
-  height:27px ;
+  height:20px ;
 margin-right: 2vw;
 align-items: center;
 justify-content: center;
@@ -64,6 +64,7 @@ justify-content: center;
 }
 .bu{
   margin-left: 2vw;
+  font-size: 1.3em;
 }
 
 Header{
