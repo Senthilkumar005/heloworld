@@ -3,7 +3,7 @@ import Adding from './Adding'
 import Footer from './Footer';
 import Test from './Test';
 import Search from './Search';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 function App() {
     const [test,setTest]=useState(
     // [  {
@@ -25,22 +25,27 @@ function App() {
     //     check:'false'
     //   }
     // ]
-    
-  JSON.parse(localStorage.getItem("doto_list"))
+    []
+  
   )
-    
+  useEffect(()=>{
+if(localStorage.getItem("doto_list") && JSON.parse(localStorage.getItem("doto_list"))?.length > 0){
+  setTest(JSON.parse(localStorage.getItem("doto_list")));
+}
+ 
+}, [])
   function checkid(id){
-    const inout = test.map((gnam)=>gnam.id===id?{...gnam,check:!gnam.check}:gnam)
+    const inout = test?.map((gnam)=>gnam.id===id?{...gnam,check:!gnam.check}:gnam)
     setTest(inout)
    localStorage.setItem("doto_list",JSON.stringify(inout))
    }
    function hdel(id){
-   const del = test.filter((dr)=>dr.id!==id)
+   const del = test?.filter((dr)=>dr?.id!==id)
    setTest(del)
    localStorage.setItem("doto_list",JSON.stringify(del))
    }
    function sti(id){
-   const stike  = test.map((vang)=>vang.id===id?{...vang,check:!vang.check}:vang)
+   const stike  = test?.map((vang)=>vang.id===id?{...vang,check:!vang.check}:vang)
    setTest(stike)
      localStorage.setItem("doto_list",JSON.stringify(stike)) 
    }
@@ -81,7 +86,7 @@ function App() {
     setSearch={setSearch}
     />
    <Test 
-   test ={test.filter(Hobbie => (Hobbie.Hobbie).toLowerCase().includes(search.toLowerCase()))}
+   test ={test?.filter(Hobbie => (Hobbie?.Hobbie).toLowerCase().includes(search?.toLowerCase()))}
    setTest ={setTest}
    checkid={checkid}
    hdel ={hdel}
